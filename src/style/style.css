@@ -41,4 +41,15 @@ section {
 #Slider .slide .textContainer {
   grid-area: text;
   white-space: nowrap;
+}
+#Slider .buttonContainer {
+  display: flex;
+  position: absolute;
+  gap: 20px;
+  bottom: 50px;
+  right: 50px;
+  font-size: 3vw;
+}
+#Slider .buttonContainer p:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

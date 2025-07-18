@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function Slider() {
   const slides = [
     { number: "001", text: "Hey Yo" },
@@ -7,6 +9,17 @@ export default function Slider() {
     { number: "005", text: "Niki Minaj" },
     { number: "006", text: "Beyonce" },
   ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handlePrev = () => {
+    const newIndex = (currentSlide - 1 + slides.length) % slides.length;
+    setCurrentSlide(newIndex);
+  };
+  const handleNext = () => {
+    const newIndex = (currentSlide + 1) % slides.length;
+    setCurrentSlide(newIndex);
+  };
 
   return (
     <section id="Slider">
@@ -22,6 +35,9 @@ export default function Slider() {
           </div>
         );
       })}
+      <div className="buttonContainer">
+        <p onClick={handlePrev}>Précédent</p> /<p onClick={handleNext}>Suivant</p>
+      </div>
     </section>
   );
 }

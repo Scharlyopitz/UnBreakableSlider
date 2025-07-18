@@ -29,4 +29,16 @@
       white-space: nowrap;
     }
   }
+  .buttonContainer {
+    display: flex;
+    position: absolute;
+    gap: 20px;
+    bottom: 50px;
+    right: 50px;
+    font-size: 3vw;
+
+    p:hover {
+      cursor: pointer;
+    }
+  }
 }
