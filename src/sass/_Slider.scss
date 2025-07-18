@@ -1,0 +1,32 @@
+#Slider {
+  font-size: 5vw;
+
+  .slide {
+    padding: 50px;
+    display: grid;
+    align-items: center;
+    position: absolute;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+      ". number . . . . . ."
+      ". . . . text . . .";
+
+    .numberContainer,
+    .textContainer {
+      overflow: hidden;
+      width: fit-content;
+    }
+
+    .numberContainer {
+      grid-area: number;
+      text-align: center;
+    }
+    .textContainer {
+      grid-area: text;
+      white-space: nowrap;
+    }
+  }
+}
