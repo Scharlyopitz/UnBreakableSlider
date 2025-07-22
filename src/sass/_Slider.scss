@@ -2,22 +2,22 @@
   font-size: 5vw;
 
   .slide {
-    padding: 50px;
+    padding: 20px;
     display: grid;
-    align-items: center;
     position: absolute;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(4, 1fr);
     height: 100%;
     width: 100%;
     grid-template-areas:
-      ". number . . . . . ."
+      "number . . . . . . ."
       ". . . . text . . .";
 
     .numberContainer,
     .textContainer {
       overflow: hidden;
       width: fit-content;
+      height: fit-content;
     }
 
     .numberContainer {

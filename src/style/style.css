@@ -18,21 +18,22 @@ section {
   font-size: 5vw;
 }
 #Slider .slide {
-  padding: 50px;
+  padding: 20px;
   display: grid;
-  align-items: center;
   position: absolute;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(4, 1fr);
   height: 100%;
   width: 100%;
-  grid-template-areas: ". number . . . . . ." ". . . . text . . .";
+  grid-template-areas: "number . . . . . . ." ". . . . text . . .";
 }
 #Slider .slide .numberContainer,
 #Slider .slide .textContainer {
   overflow: hidden;
   width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 #Slider .slide .numberContainer {
   grid-area: number;
