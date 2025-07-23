@@ -45,7 +45,7 @@ export default function Slider() {
     <section id="Slider">
       <AnimatePresence>
         <m.div
-          key={currentSlide} // change de slide
+          key={currentSlide} // change de slide !
           initial="initial"
           animate="animate"
           exit="exit"
