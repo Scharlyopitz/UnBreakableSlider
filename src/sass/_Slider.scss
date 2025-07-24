@@ -11,12 +11,18 @@
     width: 100%;
     grid-template-areas:
       "number . . . . . . ."
-      ". . . . text . . .";
+      ". . . . text text text ."
+      "image image image image . . . ."
+      "image image image image . . . .";
+
+    .numberContainer,
+    .textContainer,
+    .imageContainer {
+      overflow: hidden;
+    }
 
     .numberContainer,
     .textContainer {
-      overflow: hidden;
-      width: fit-content;
       height: fit-content;
     }
 
@@ -27,6 +33,15 @@
     .textContainer {
       grid-area: text;
       white-space: nowrap;
+    }
+    .imageContainer {
+      grid-area: image;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
   .buttonContainer {

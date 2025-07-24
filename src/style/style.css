@@ -25,13 +25,15 @@ section {
   grid-template-rows: repeat(4, 1fr);
   height: 100%;
   width: 100%;
-  grid-template-areas: "number . . . . . . ." ". . . . text . . .";
+  grid-template-areas: "number . . . . . . ." ". . . . text text text ." "image image image image . . . ." "image image image image . . . .";
+}
+#Slider .slide .numberContainer,
+#Slider .slide .textContainer,
+#Slider .slide .imageContainer {
+  overflow: hidden;
 }
 #Slider .slide .numberContainer,
 #Slider .slide .textContainer {
-  overflow: hidden;
-  width: -moz-fit-content;
-  width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -42,6 +44,15 @@ section {
 #Slider .slide .textContainer {
   grid-area: text;
   white-space: nowrap;
+}
+#Slider .slide .imageContainer {
+  grid-area: image;
+}
+#Slider .slide .imageContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #Slider .buttonContainer {
   display: flex;
