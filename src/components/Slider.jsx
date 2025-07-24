@@ -43,7 +43,7 @@ export default function Slider() {
 
   return (
     <section id="Slider">
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         <m.div
           key={currentSlide} // change de slide !
           initial="initial"
